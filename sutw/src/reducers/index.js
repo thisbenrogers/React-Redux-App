@@ -1,0 +1,1 @@
+export { lyricsReducer } from './lyricsReducer';
