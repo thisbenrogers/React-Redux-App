@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 import { lyricsReducer } from './reducers';
 
@@ -9,7 +10,7 @@ import App from './App';
 
 import './index.css';
 
-const store = createStore(lyricsReducer);
+const store = createStore(lyricsReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
     <Provider store={store}>
