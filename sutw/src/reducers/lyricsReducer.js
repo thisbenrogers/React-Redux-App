@@ -1,5 +1,6 @@
 const initialState = {
-    lyrics: ''
+    lyrics: '',
+    isLoading: false
 }
 
 export const lyricsReducer = (state = initialState, action) => {
